@@ -16,18 +16,9 @@ const BookList = () => {
 
   return (
     <section className="booklist">
-      <Book
-        title={firstBook.title}
-        author={firstBook.author}
-        img={firstBook.img}
-      >
-        <p>Hello world</p>
-      </Book>
-      <Book
-        title={secondBook.title}
-        author={secondBook.author}
-        img={secondBook.img}
-      />
+      {books.map((book) => {
+        return <Book {...book} />;
+      })}
     </section>
   );
 };
