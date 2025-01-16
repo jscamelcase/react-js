@@ -1,5 +1,7 @@
 import logo from "../images/logo.svg";
 
+import { pageLinks } from "../data";
+
 function Navbar() {
   return (
     <nav className="navbar">
@@ -12,33 +14,15 @@ function Navbar() {
         </div>
         {/* <!-- left this comment on purpose --> */}
         <ul className="nav-links" id="nav-links">
-          <li>
-            <a href="#home" className="nav-link">
-              {" "}
-              home{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" className="nav-link">
-              {" "}
-              about{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#services" className="nav-link">
-              {" "}
-              services{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#tours" className="nav-link">
-              {" "}
-              tours
-            </a>
-          </li>
+          {pageLinks.map((page) => {
+            return (
+              <li key={page.id}>
+                <a href={`${page.href}`} className="nav-link">
+                  {`${page.text}`}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <ul className="nav-icons">
