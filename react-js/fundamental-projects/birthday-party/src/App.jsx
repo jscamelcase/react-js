@@ -1,4 +1,13 @@
+import data from "./data.js";
+import Header from "./components/Header/Header.jsx";
+import List from "./components/List/List.jsx";
+
 const App = () => {
-  return <h2>Birthday Reminder - Starter</h2>;
+  return (
+    <div className="container">
+      <Header listLength={data.length} />
+      <List />
+    </div>
+  );
 };
 export default App;
