@@ -1,0 +1,20 @@
+.tourCard {
+  width: 320px;
+}
+
+.tourCard__imgContainer {
+  position: relative;
+}
+
+.tourCard__img {
+  height: 352px;
+  width: 320px;
+  object-fit: cover;
+}
+
+.tourCard__price {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
