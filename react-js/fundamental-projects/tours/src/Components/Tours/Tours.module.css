@@ -1,0 +1,35 @@
+.tours {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.tours__heading {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.tours__heading::before {
+  content: "";
+  width: 5%;
+  position: absolute;
+  border-bottom: 4px solid #10b981;
+  padding: 25px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tours__resetButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #10b981;
+  color: white;
+  padding: 20px;
+  border: none;
+  font-size: 2rem;
+}
