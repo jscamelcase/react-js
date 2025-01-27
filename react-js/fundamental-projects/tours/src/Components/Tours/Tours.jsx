@@ -44,6 +44,7 @@ function Tours(prop) {
 
   const refreshTours = function () {
     setHasRefresh((previousRefresh) => {
+      setIsLoading(true);
       return !previousRefresh;
     });
   };
