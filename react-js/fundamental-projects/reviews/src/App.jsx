@@ -5,6 +5,8 @@ import { capitaliseFullName } from "./utils/formatting";
 import CardName from "./components/CardName";
 import CardDescription from "./components/CardDescription/CardDescription";
 import CardControls from "./components/CardControls/CardControls";
+import CardButtonRandom from "./components/CardButtonRandom/CardButtonRandom";
+import CardContainer from "./components/CardContainer/CardContainer";
 
 const App = () => {
   const [list, setList] = useState(data);
@@ -19,13 +21,18 @@ const App = () => {
     }
   };
   const handleLeftMove = function () {
-    if (slideshowPosition > list.length - 1) {
+    if (slideshowPosition > 0) {
       setslideshowPosition((previous) => {
-        return previous + 1;
+        return previous - 1;
       });
     } else {
-      setslideshowPosition(0);
+      setslideshowPosition(list.length - 1);
     }
+  };
+
+  const randomSlide = function () {
+    const randomIndex = Math.floor(Math.random() * list.length);
+    setslideshowPosition(randomIndex);
   };
   //data object deconstruction
   let { id, job, name, image, text } = list[slideshowPosition];
@@ -33,7 +40,7 @@ const App = () => {
   job = job.toUpperCase();
 
   return (
-    <>
+    <CardContainer>
       <CardCenterImage imgSrc={image} />
       <CardName name={name} job={job} />
       <CardDescription text={text} />
@@ -41,7 +48,8 @@ const App = () => {
         leftOnClick={handleLeftMove}
         rightOnClick={handleRightMove}
       />
-    </>
+      <CardButtonRandom onClick={randomSlide} />
+    </CardContainer>
   );
 };
 export default App;

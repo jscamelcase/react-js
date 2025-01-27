@@ -1,0 +1,19 @@
+.buttonRandom__container {
+  text-align: center;
+}
+
+.buttonRandom {
+  height: 27px;
+  width: 105px;
+  background-color: #c1beff;
+  width: 105px;
+  height: 27px;
+  border: none;
+  color: #645cff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+}
+
+.buttonRandom:active {
+  transform: translateY(-2px);
+}
