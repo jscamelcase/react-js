@@ -1,4 +1,4 @@
-import styles from "./CenterImage.module.css";
+import styles from "./CardCenterImage.module.css";
 
 function CenterImage(props) {
   return (

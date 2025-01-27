@@ -1,0 +1,15 @@
+.cardControl {
+  text-align: center;
+}
+
+.cardControl__button {
+  height: 20px;
+  width: 20px;
+  background: none;
+  border: none;
+  margin-right: 1.5rem;
+}
+
+.cardControl__button:active {
+  transform: translateY(-2px);
+}
