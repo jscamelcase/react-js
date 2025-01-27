@@ -1,4 +1,11 @@
+import CenterImage from "./components/CenterImage";
+import data from "./data";
+
 const App = () => {
-  return <h2>Reviews Starter</h2>;
+  return (
+    <>
+      <CenterImage imgSrc={data[0].image} />
+    </>
+  );
 };
 export default App;

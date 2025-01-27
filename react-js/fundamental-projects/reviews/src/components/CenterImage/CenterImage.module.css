@@ -1,0 +1,28 @@
+.profileImage {
+  height: 14.5rem;
+  width: 14.5rem;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.profileImage::after {
+  content: "";
+  background-color: #645cff;
+  position: absolute;
+  transform: scale(1);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  bottom: 6px;
+  left: 7px;
+}
+
+.profileImage__src {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+}
