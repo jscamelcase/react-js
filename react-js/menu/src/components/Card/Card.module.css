@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", serif;
+  padding-bottom: 2rem;
+}
+
+.card__image {
+  height: 270px;
+  margin-bottom: 4rem;
+}
+
+.card__descriptionContainer {
+  padding: 0 2.4rem;
+}
+
+.card__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.card__heading {
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 2rem;
+}
+
+.card__price {
+  font-size: 1.6rem;
+  color: white;
+  padding: 4px 8px;
+  background-color: #f59e0b;
+}
+
+.card__para {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: #64748b;
+}
