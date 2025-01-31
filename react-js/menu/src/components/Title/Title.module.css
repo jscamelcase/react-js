@@ -1,0 +1,18 @@
+.title {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  position: relative;
+  margin: 3rem auto;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 10%; /* Adjust to control underline width */
+  height: 3px;
+  background-color: #f59e0b;
+  left: 50%; /* Start at the middle */
+  bottom: -9px; /* Adjust to fine-tune position */
+  transform: translateX(-50%); /* Shift left by half its own width to center */
+}

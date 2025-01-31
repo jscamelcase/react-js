@@ -8,6 +8,7 @@
 .card__image {
   height: 270px;
   margin-bottom: 4rem;
+  object-fit: cover;
 }
 
 .card__descriptionContainer {

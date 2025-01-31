@@ -1,21 +1,16 @@
 import styles from "./Card.module.css";
 
-function Card() {
+function Card(props) {
   return (
     <div className={styles.card}>
-      <img className={styles.card__image} src="/images/item-1.jpeg" alt="" />
+      <img className={styles.card__image} src={props.img} alt={props.title} />
       <div className={styles.card__descriptionContainer}>
         <div className={styles.card__title}>
-          <h2 className={styles.card__heading}>Buttermilk Pancakes</h2>
-          <span className={styles.card__price}>$15.99</span>
+          <h2 className={styles.card__heading}>{props.title}</h2>
+          <span className={styles.card__price}>${props.price}</span>
         </div>
 
-        <p className={styles.card__para}>
-          I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock
-          freegan copper mug whatever cold-pressed I'm baby woke mlkshk wolf
-          bitters live-edge blue bottle, hammock freegan copper mug whatever
-          cold-pressed
-        </p>
+        <p className={styles.card__para}>{props.desc}</p>
       </div>
     </div>
   );
