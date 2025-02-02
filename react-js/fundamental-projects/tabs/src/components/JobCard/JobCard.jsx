@@ -3,10 +3,10 @@ import styles from "./JobCard.module.css";
 function JobCard() {
   return (
     <section className={styles.card}>
-      <div className="card__title">
-        <h3 className="card__heading">Full Stack Developer</h3>
-        <h4 className="card__company">TOMMY</h4>
-        <h5 className="card__dates">December 2015 - Present</h5>
+      <div className={styles.card__title}>
+        <h3 className={styles.card__heading}>Full Stack Web Developer</h3>
+        <h4 className={styles.card__company}>TOMMY</h4>
+        <h5 className={styles.card__dates}>December 2015 - Present</h5>
       </div>
       <ul className={styles.card__list}>
         <li className={styles.card__item}>
