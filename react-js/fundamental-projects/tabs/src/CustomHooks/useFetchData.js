@@ -4,6 +4,7 @@ export default function useFetchData(url) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const [itemSelected, setItemSelected] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,6 +30,7 @@ export default function useFetchData(url) {
         console.log(data);
         setIsLoading(false);
         setData(data);
+        setItemSelected(data[0].id);
       } catch (error) {
         console.error("Fetch error:", error.message);
         setHasError(true);
@@ -39,5 +41,5 @@ export default function useFetchData(url) {
     fetchData();
   }, []);
 
-  return { data, isLoading, hasError };
+  return { data, isLoading, hasError, itemSelected, setItemSelected };
 }
