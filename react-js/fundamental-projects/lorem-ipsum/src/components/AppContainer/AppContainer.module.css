@@ -1,0 +1,9 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 8rem;
+  width: 80%;
+  text-align: justify;
+}

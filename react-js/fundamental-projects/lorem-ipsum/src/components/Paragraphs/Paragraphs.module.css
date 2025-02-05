@@ -1,0 +1,11 @@
+.paragraphs {
+  margin-top: 3.7rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.para {
+  font-size: 1.6rem;
+  line-height: 1.87rem;
+  color: #0f172a;
+  margin-bottom: 2rem;
+}

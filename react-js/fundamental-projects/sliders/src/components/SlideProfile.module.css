@@ -1,0 +1,69 @@
+/* Container holding the entire slider */
+.slideProfile {
+  width: 80rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Div containing all the slides */
+.slide__div {
+  position: relative; /* ✅ Ensures absolute-positioned slides align correctly */
+  width: 500px; /* ✅ Matches slide width */
+  height: auto;
+  overflow: hidden; /* ✅ Prevents showing extra slides */
+}
+
+/* Individual slide styling */
+.slide__container {
+  position: absolute; /* ✅ Stacks all slides on top of each other */
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* ✅ Smooth fade effect */
+}
+
+/* Navigation button styles */
+.slide__button {
+  background-color: #64748b;
+  border: none;
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 4px;
+}
+
+/* Styling for slide content */
+.slide__name {
+  font-size: 2rem;
+  color: #8b5cf6;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.slide__image {
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.slide__title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 3.2rem;
+}
+
+.slide__para {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: #64748b;
+  margin-bottom: 3.2rem;
+}
+
+/* Profile Image */
+.slide__profileImage {
+  height: 15rem;
+  width: 15rem;
+  margin-bottom: 1.4rem;
+  object-fit: cover;
+  border-radius: 75px;
+}
