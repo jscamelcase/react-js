@@ -1,0 +1,11 @@
+.colorList {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 306px;
+  font-family: "Roboto", sans-serif;
+}
+
+.colorList__item {
+  padding-top: 1.6rem;
+  padding-left: 1rem;
+}
