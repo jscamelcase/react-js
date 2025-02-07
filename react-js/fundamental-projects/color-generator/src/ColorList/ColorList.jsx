@@ -1,32 +1,18 @@
 import { useState } from "react";
 import styles from "./ColorList.module.css";
+import useClipboard from "../hooks/useClipboard";
+import { v4 as uuidv4 } from "uuid";
 
 function ColorList(props) {
   console.log(props.colorList);
-  const [isCopied, setIsCopied] = useState(false);
-  const copyToClipboard = async (text) => {
-    try {
-      if (!text || typeof text !== "string") {
-        console.error("Invalid text for copying:", text);
-        return;
-      }
-
-      await navigator.clipboard.writeText(text);
-      console.log("Copied:", text);
-      setIsCopied(true);
-      setTimeout(() => {
-        setIsCopied(false);
-      }, 1000);
-    } catch (err) {
-      console.error("Failed to copy text:", err);
-    }
-  };
+  const { isCopied, setIsCopied, copyToClipboard } = useClipboard();
 
   return (
     <div className={styles.colorList}>
       {props.colorList.map((item, index) => {
         return (
           <div
+            key={uuidv4()}
             onClick={() => {
               copyToClipboard(`#${item.hex}`);
             }}
