@@ -1,0 +1,10 @@
+.deleteButton {
+  font-family: "Roboto" sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 7px 4px;
+  background: #222222;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px #0000000d;
+  box-shadow: 0 1px 3px 0 #0000001a;
+}
