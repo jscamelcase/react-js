@@ -6,6 +6,7 @@ function ListItem(props) {
   const handleCheck = function (e) {
     setIsMarked((prev) => !prev);
   };
+  
   return (
     <div className={styles.listItem}>
       <input

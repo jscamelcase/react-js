@@ -1,0 +1,11 @@
+nav {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  nav {
+    position: static;
+  }
+}
