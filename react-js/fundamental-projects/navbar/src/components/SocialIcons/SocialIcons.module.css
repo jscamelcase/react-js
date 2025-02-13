@@ -1,0 +1,15 @@
+.socialIcon__container {
+  color: blue;
+  margin: 0 8px;
+}
+
+.socialIcons {
+  display: none;
+  color: #49a6e9;
+}
+
+@media (min-width: 768px) {
+  .socialIcons {
+    display: flex;
+  }
+}
