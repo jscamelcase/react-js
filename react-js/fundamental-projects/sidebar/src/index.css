@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
