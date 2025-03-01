@@ -1,0 +1,8 @@
+.aside {
+  min-height: 100vh;
+  background-color: red;
+  width: 400px;
+  top: 0%;
+  position: absolute;
+  background-color: #ffffff;
+}
