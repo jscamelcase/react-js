@@ -1,0 +1,6 @@
+.page-aside__links {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}

@@ -6,3 +6,7 @@
   position: absolute;
   background-color: #ffffff;
 }
+
+.aside--hide {
+  display: none;
+}

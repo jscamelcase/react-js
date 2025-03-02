@@ -11,29 +11,40 @@ import PageAside from "./components/PageAside";
 import PageAsideHeading from "./components/PageAsideHeading";
 import PageAsideLogo from "./components/PageAsideLogo";
 import PageAsideLinks from "./components/PageAsideLinks";
-import { links } from "./../data.jsx";
+import { links, social } from "./../data.jsx";
 import PageAsideLinkItem from "./components/PageAsideLinkItem/PageAsideLinkItem.jsx";
-import React from "react";
+import Link from "./components/Link/Link.jsx";
+import PageAsideSocialLinks from "./components/PageAsideSocialLinks/PageAsideSocialLinks.jsx";
+import PageAsideSocialLink from "./components/PageAsideSocialLink/PageAsideSocialLink.jsx";
 
 function App() {
+  console.log(social);
   const [toggle, setToggle] = useState(false);
+  const [asideToggle, setAsideToggle] = useState(false);
   function handleToggle() {
     setToggle((prev) => !prev);
     console.log("hello");
   }
+
+  function handleAsideToggle() {
+    setAsideToggle((prev) => !prev);
+    console.log("hello");
+  }
   return (
-    <PageContext.Provider value={{ handleToggle, toggle }}>
+    <PageContext.Provider
+      value={{ handleToggle, toggle, asideToggle, handleAsideToggle }}
+    >
       <Home>
         <HamburgerIcon homePage={true} />
         <ModalButton>Show Modal</ModalButton>
         <Modal>
           <ModalMessage>Modal Content</ModalMessage>
-          <ModalX />
+          <ModalX type="modal" />
         </Modal>
         <PageAside>
           <PageAsideHeading>
             <PageAsideLogo />
-            <ModalX />
+            <ModalX type="aside" />
           </PageAsideHeading>
           <PageAsideLinks>
             {links.map((link) => {
@@ -44,11 +55,25 @@ function App() {
                   iconColor={"#334155"}
                 >
                   {link.icon}
-                  <a href={link.url}>{link.text}</a>
+                  <Link href={link.url}>{link.text}</Link>
                 </PageAsideLinkItem>
               );
             })}
           </PageAsideLinks>
+          <PageAsideSocialLinks>
+            {social.map((item) => {
+              return (
+                <PageAsideSocialLink
+                  key={item.id}
+                  href={item.url}
+                  iconSize={"24px"}
+                  iconColor={"#49A6E9"}
+                >
+                  {item.icon}
+                </PageAsideSocialLink>
+              );
+            })}
+          </PageAsideSocialLinks>
         </PageAside>
       </Home>
     </PageContext.Provider>
